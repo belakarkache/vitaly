@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import DailyCaloriesCalculator from '@/components/DailyCaloriesCalculator.vue'
 import { computed, ref } from 'vue'
 
 const dailyGoal = ref(2000)
