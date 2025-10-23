@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import DailyGoal from '@/features/home/DailyGoal.vue'
+</script>
+
 <template>
-  <h2 class="h-[150vh]">teste home</h2>
+  <section>
+    <DailyGoal />
+  </section>
 </template>

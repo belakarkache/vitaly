@@ -5,6 +5,8 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { VitePWA } from 'vite-plugin-pwa'
 import tailwindcss from '@tailwindcss/vite'
+import Components from 'unplugin-vue-components/vite'
+import { PrimeVueResolver } from '@primevue/auto-import-resolver'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -12,6 +14,9 @@ export default defineConfig({
     vue(),
     vueDevTools(),
     tailwindcss(),
+    Components({
+      resolvers: [PrimeVueResolver()],
+    }),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'pwa-*.png'],

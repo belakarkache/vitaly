@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Button } from 'primevue'
 import IconCalendar from './icons/IconCalendar.vue'
 import IconHome from './icons/IconHome.vue'
 import IconScale from './icons/IconScale.vue'
@@ -25,8 +24,8 @@ const isActive = (item: { to: string }) => {
         <li v-for="item in menuItems" :key="item.label">
           <RouterLink
             :to="item.to"
-            class="flex flex-col items-center justify-center gap-1 p-1 w-[60px] h-[60px] rounded-sm"
-            :class="isActive(item) ? 'text-orange-400 bg-orange-300/10' : 'text-zinc-700'"
+            class="flex flex-col items-center justify-center gap-1 p-1 w-[72px] h-[72px] rounded-sm"
+            :class="isActive(item) ? 'text-primary-400 bg-primary-300/10' : 'text-zinc-700'"
           >
             <component :is="item.icon" :size="24" />
             <span class="text-xs font-semibold">{{ item.label }}</span>
