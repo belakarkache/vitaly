@@ -236,6 +236,7 @@ onMounted(() => {
             :min="10"
             :max="500"
             size="small"
+            mode="decimal"
             suffix=" kg"
             :maxFractionDigits="2"
             fluid
