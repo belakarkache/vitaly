@@ -21,3 +21,7 @@ body,
 html {
   @apply overflow-x-hidden;
 }
+
+.label-form {
+  @apply block text-sm font-medium text-zinc-400 mb-2;
+}

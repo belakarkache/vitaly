@@ -11,8 +11,6 @@ import TopMenu from './components/TopMenu.vue'
   </main>
 
   <BottomMenu />
-
-  <!-- <div class="container m-auto p-5">Fruit icons created by Umeicon - Flaticon</div> -->
 </template>
 
 <style scoped></style>
