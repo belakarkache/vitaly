@@ -6,8 +6,8 @@ import { useRoute } from 'vue-router'
 
 const menuItems = [
   { label: 'Hoje', icon: IconHome, to: '/' },
-  { label: 'Histórico', icon: IconCalendar, to: '/historico' },
   { label: 'Peso', icon: IconScale, to: '/peso' },
+  { label: 'Histórico', icon: IconCalendar, to: '/historico' },
 ]
 
 const route = useRoute()

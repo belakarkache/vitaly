@@ -14,6 +14,7 @@ declare module 'vue' {
     Avatar: typeof import('primevue/avatar')['default']
     BottomMenu: typeof import('./src/components/BottomMenu.vue')['default']
     Button: typeof import('primevue/button')['default']
+    CalorieProgressCircle: typeof import('./src/components/CalorieProgressCircle.vue')['default']
     Card: typeof import('primevue/card')['default']
     Dialog: typeof import('primevue/dialog')['default']
     Drawer: typeof import('primevue/drawer')['default']
