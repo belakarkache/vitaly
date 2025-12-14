@@ -71,8 +71,9 @@ const handleConfirmDailyGoal = () => {
     } else if (biologicalSex === 'female') {
       bmr = 10 * weight! + 6.25 * height! - 5 * age! - 161
     }
-    const tdee = bmr * activityLevel!
-    const dailyCaloricGoal = tdee * goal!
+
+    const tdee = bmr * (activityLevel as unknown as number)
+    const dailyCaloricGoal = tdee * (goal as unknown as number)
     dailyGoal.value = Math.round(dailyCaloricGoal)
   }
   saveInformationToLocalStorage()
