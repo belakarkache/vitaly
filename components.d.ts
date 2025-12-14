@@ -16,6 +16,8 @@ declare module 'vue' {
     Button: typeof import('primevue/button')['default']
     CalorieProgressCircle: typeof import('./src/components/CalorieProgressCircle.vue')['default']
     Card: typeof import('primevue/card')['default']
+    Chart: typeof import('primevue/chart')['default']
+    DatePicker: typeof import('primevue/datepicker')['default']
     Dialog: typeof import('primevue/dialog')['default']
     Drawer: typeof import('primevue/drawer')['default']
     FloatLabel: typeof import('primevue/floatlabel')['default']
@@ -34,6 +36,8 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     Select: typeof import('primevue/select')['default']
     SelectButton: typeof import('primevue/selectbutton')['default']
+    SpeedDial: typeof import('primevue/speeddial')['default']
+    Tag: typeof import('primevue/tag')['default']
     TopMenu: typeof import('./src/components/TopMenu.vue')['default']
   }
 }

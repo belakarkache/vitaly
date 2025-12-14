@@ -6,7 +6,7 @@ import TopMenu from './components/TopMenu.vue'
 <template>
   <TopMenu />
 
-  <main class="container !mt-[60px] !pb-[calc(var(--nav-h)+var(--safe-bottom))]">
+  <main class="container mt-15! pb-30!">
     <RouterView />
   </main>
 

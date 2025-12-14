@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { useGlobalStore } from '@/stores/global'
 import { computed, onMounted, ref } from 'vue'
 
-const dailyGoal = ref(2000)
 const dailyCalories = ref(0)
 const isDailyGoalModalOpen = ref(false)
 const fixedValue = ref()
@@ -40,14 +40,9 @@ const activityLevelOptions = [
   },
 ]
 
-const userInformation = ref({
-  age: 18,
-  weight: null,
-  height: null,
-  biologicalSex: null,
-  activityLevel: null,
-  goal: null,
-})
+const globalStore = useGlobalStore()
+const userInformation = ref(globalStore.userInformation)
+const dailyGoal = ref(globalStore.dailyGoal)
 
 const handleDailyGoalModal = () => {
   isDailyGoalModalOpen.value = !isDailyGoalModalOpen.value
@@ -85,8 +80,8 @@ const handleConfirmDailyGoal = () => {
 }
 
 const saveInformationToLocalStorage = () => {
-  localStorage.setItem('dailyGoal', dailyGoal.value.toString())
-  localStorage.setItem('userInformation', JSON.stringify(userInformation.value))
+  globalStore.updateStoreAndStorage('userInformation', userInformation.value)
+  globalStore.updateStoreAndStorage('dailyGoal', dailyGoal.value)
 }
 
 onMounted(() => {
@@ -221,7 +216,7 @@ onMounted(() => {
           >
         </div>
 
-        <div class="max-w-[160px]">
+        <div class="max-w-40">
           <label class="label-form" for="age"> Idade </label>
           <InputNumber
             v-model="userInformation.age"
@@ -237,7 +232,7 @@ onMounted(() => {
         </div>
 
         <div class="flex gap-3">
-          <div class="max-w-[160px]">
+          <div class="max-w-40">
             <label class="label-form" for="weight">Peso</label>
             <InputNumber
               v-model="userInformation.weight"
@@ -252,7 +247,7 @@ onMounted(() => {
             />
           </div>
 
-          <div class="max-w-[160px]">
+          <div class="max-w-40">
             <label class="label-form" for="height">Altura</label>
             <InputNumber
               v-model="userInformation.height"
